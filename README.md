@@ -6,10 +6,12 @@ El sistema consiste en una __clasificadora automática de envases basada en el c
 
 En caso de no reconocer el color, se detecta una falla y se detiene el sistema. 
 
-- __S<sub>C</sub>__ : Sensor COLOR
- - __S<sub>P0</sub>__ : Sensor DETECTOR DE RECIPIENTE 
- - __S<sub>Projo</sub>__ : Sensor DETECTOR DE RECIPIENTE (Posición salida correspondiente)
- - __S<sub>Pazul</sub>__ : Sensor DETECTOR DE RECIPIENTE (Posición salida correspondiente)
- - __S<sub>Pverde</sub>__ : Sensor DETECTOR DE RECIPIENTE (Posición salida correspondiente)
-
  ## Máquina de estado 
+![alt text](https://github.com/martina-di-scala/Info2-PROYECTO/blob/main/Recursos/Maquina%20de%20Estado.png)
+
+
+- __S<sub>C</sub>__: Sensor COLOR
+ - __S<sub>P0</sub>__: Sensor DETECTOR DE RECIPIENTE 
+ - __S<sub>Projo</sub>__: Sensor DETECTOR DE RECIPIENTE (Posición salida correspondiente)
+ - __S<sub>Pazul</sub>__: Sensor DETECTOR DE RECIPIENTE (Posición salida correspondiente)
+ - __S<sub>Pverde</sub>__: Sensor DETECTOR DE RECIPIENTE (Posición salida correspondiente)
