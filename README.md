@@ -7,7 +7,7 @@ El sistema consiste en una __clasificadora automática de envases basada en el c
 En caso de no reconocer el color, se detecta una falla y se detiene el sistema. 
 
  ## Máquina de estado 
-![alt text](https://github.com/martina-di-scala/Info2-PROYECTO/blob/main/Recursos/MAQUINA%20DE%20ESTADO%202.png)
+![alt text](https://github.com/martina-di-scala/Info2-PROYECTO/blob/main/Recursos/Maquina%20de%20Estado.png)
 
 
 - __S<sub>C</sub>__: Sensor COLOR
