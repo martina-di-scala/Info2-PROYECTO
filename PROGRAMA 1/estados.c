@@ -25,7 +25,6 @@ estados_t f_lectura(void){
 }
 estados_t cl_rojo(void){
     
-    
 }
 estados_t cl_verde(void){
     
@@ -33,6 +32,6 @@ estados_t cl_verde(void){
 estados_t cl_azul(void){
     
 }
-estados_t f_parada(entradas_t){
+estados_t f_parada(void){
 
 }

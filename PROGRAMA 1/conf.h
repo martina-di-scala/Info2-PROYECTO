@@ -32,11 +32,11 @@ void desactivar_ac_azul(void);
 
 //Definiciones de puertos para los actuadores
 #define ACTUADORES_PORT avr_GPIO_A
-#define AC_ROJO avr_GPIOB_OUT_0
+#define AC_ROJO avr_GPIOA_OUT_0
 #define AC_ROJO_PIN avr_GPIO_PIN_0
-#define AC_VERDE avr_GPIOB_OUT_2
+#define AC_VERDE avr_GPIOA_OUT_2
 #define AC_VERDE_PIN avr_GPIO_PIN_2
-#define AC_AZUL avr_GPIOB_OUT_4
+#define AC_AZUL avr_GPIOA_OUT_4
 #define AC_AZUL_PIN avr_GPIO_PIN_4
 
 //Canal de conersión para el sensor color (pote)

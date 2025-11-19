@@ -14,18 +14,18 @@ typedef enum {
 }estados_t;
 
 //limites de voltaje por color 
-#define LIMITE_ROJO 1
-#define LIMITE_VERDE 1
-#define LIMITE_AZUL 2
+#define LIMITE_ROJO 1800
+#define LIMITE_VERDE 3000
+#define LIMITE_AZUL 4200
 
-/* typedef struct {
+typedef struct {
   char s_color;
   char sp_inicio;
   char sp_rojo;
   char sp_verde;
   char sp_azul;
 }entradas_t;
-
+/*
 typedef struct{
   char ac_rojo;
   char ac_verde;

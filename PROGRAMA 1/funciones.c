@@ -1,4 +1,5 @@
 #include "mylib.h"
+#include "conf.h"
 
 void init_mcu(void){
     GpioInitStructure_AVR sensores, actuadores;
@@ -21,31 +22,31 @@ void init_mcu(void){
     s_color.prescaler = avr_ADC_Prescaler_64;
     init_adc(s_color);
 
-    // lectura del adc 0 - 1023 => (2560/1024) = 2.5 cuentas por milivolt |  2.5 * cuentas = milivolts leidos 
+}
+
+// lectura del adc 0 - 1023 => (2560/1024) = 2.5 cuentas por milivolt |  2.5 * cuentas = milivolts leidos 
     int leer_color(void){
         return (((float)leer_ADC(ADC_PORT) * (2560.0/1024.0)));
     }
 
     void activar_ac_rojo(void);{
-
+        ac_rojo=1;
     }
     void desactivar_ac_rojo(void);{
-
+        ac_rojo=0;
     }
 
     void activar_ac_verde(void);{
-
+        ac_verde=1;
     }
     void desactivar_ac_verde(void);{
-
+        ac_verde=0;
     }
 
     void activar_ac_azul(void);{
-
+        ac_azul=1;
     }
     void desactivar_ac_azul(void);{
-        
+        ac_azul=0;
     }
-}
-
 
