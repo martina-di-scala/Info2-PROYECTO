@@ -1,27 +1,48 @@
 #ifndef MY_LIB
 #define MY_LIB
-#include <stdio.h>
+//#include"avr_api.h"
+
+
 
 typedef enum {
     espera = 0,
     lectura =1,
-    clasificacion=2,
-    parada=3
+    cl_rojo=2,
+    cl_verde=3,
+    cl_azul=4,
+    parada=5
 }estados_t;
 
-typedef struct {
+//limites de voltaje por color 
+#define LIMITE_ROJO 1
+#define LIMITE_VERDE 1
+#define LIMITE_AZUL 2
+
+/* typedef struct {
   char s_color;
   char sp_inicio;
   char sp_rojo;
   char sp_verde;
   char sp_azul;
-  char ac_clasifica;  
-  char c_nodetecta; 
 }entradas_t;
 
-estados_t f_espera(entradas_t);
-estados_t f_lectura(entradas_t);
-estados_t f_clasificacion(entradas_t);
-estados_t f_parada(entradas_t);
+typedef struct{
+  char ac_rojo;
+  char ac_verde;
+  char ac_azul;
+}salidas_t;
+
+typedef enum {
+    rojo = 0,
+    verde = 1,
+    azul= 2
+}color_t;
+ */
+estados_t f_espera(void);
+estados_t f_lectura(void);
+estados_t cl_rojo(void);
+estados_t cl_verde(void);
+estados_t cl_azul(void);
+estados_t f_parada(void);
 
 #endif
