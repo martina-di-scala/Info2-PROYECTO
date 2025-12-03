@@ -1,6 +1,7 @@
 #ifndef CONF_H
 #define CONF_H 1
 #include "mylib.h"
+#include"avr_api.h"
 
 //Función de inicializacion y configuacion del micro
 void init_mcu(void);
@@ -17,6 +18,9 @@ void desactivar_ac_verde(void);
 
 void activar_ac_azul(void);
 void desactivar_ac_azul(void);
+
+void activar_cinta(void);
+void desactivar_cinta(void);
 
 
 //Definiciones de puertos para los sensores
@@ -38,6 +42,8 @@ void desactivar_ac_azul(void);
 #define AC_VERDE_PIN avr_GPIO_PIN_2
 #define AC_AZUL avr_GPIOA_OUT_4
 #define AC_AZUL_PIN avr_GPIO_PIN_4
+#define MOTOR_CINTA avr_GPIOA_OUT_6
+#define MOTOR_CINTA_PIN avr_GPIO_PIN_6
 
 //Canal de conersión para el sensor color (pote)
 #define ADC_PORT avr_ADC_canal0
