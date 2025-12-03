@@ -25,10 +25,10 @@ void init_mcu(void){
 }
 
     void activar_cinta(void){
-        motor_cinta=1;
+        MOTOR_CINTA=1;
     }
     void desactivar_cinta(void){
-        motor_cinta=0;
+        MOTOR_CINTA=0;
     }
 
 // lectura del adc 0 - 1023 => (2560/1024) = 2.5 cuentas por milivolt |  2.5 * cuentas = milivolts leidos 

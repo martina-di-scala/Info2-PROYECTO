@@ -70,7 +70,7 @@ estados_t f_parada(void){
 
     if (!SP_INICIO && !SP_ROJO && !SP_VERDE && !SP_AZUL)
     {
-        iniciar_cinta();
+        activar_cinta();
         return ESPERA;
     }
     else
