@@ -21,6 +21,7 @@ estados_t f_espera(void){
 estados_t f_lectura(void){
     int color;
     color=leer_color();
+    
     if ( color < LIMITE_ROJO) {
         return CL_ROJO;
     } 
@@ -36,44 +37,54 @@ estados_t f_lectura(void){
     }
 }
 estados_t f_cl_rojo(void){
-    activar_ac_rojo();
     desactivar_ac_verde();
     desactivar_ac_azul();
 
     if (SP_ROJO)     
-        return CL_ROJO;
-    else
+        activar_ac_rojo();
+    if (SP_INICIO) {
+        desactivar_ac_rojo();
         return ESPERA;
+    }
+    return CL_ROJO;
 }
+
 estados_t f_cl_verde(void){
-    activar_ac_verde();
     desactivar_ac_rojo();
     desactivar_ac_azul();
 
     if (SP_VERDE)     
-        return CL_VERDE;
-    else
+        activar_ac_verde();
+    if (SP_INICIO) {
+        desactivar_ac_verde();
         return ESPERA;
+    }
+    return CL_VERDE;
 }
 estados_t f_cl_azul(void){
-     activar_ac_azul();
     desactivar_ac_rojo();
     desactivar_ac_verde();
 
-    if (SP_AZUL)     
-        return CL_AZUL;
-    else
-        return ESPERA;   
+     if (SP_ROJO)     
+        activar_ac_rojo();
+    if (SP_INICIO) {
+        desactivar_ac_rojo();
+        return ESPERA;
+    }
+    return CL_AZUL;
 }
 estados_t f_parada(void){
-     desactivar_cinta();
+    desactivar_cinta();
+    desactivar_ac_rojo();
+    desactivar_ac_verde();
+    desactivar_ac_azul();
 
-    if (!SP_INICIO && !SP_ROJO && !SP_VERDE && !SP_AZUL)
+    /*if (!SP_INICIO && !SP_ROJO && !SP_VERDE && !SP_AZUL)
     {
         activar_cinta();
         return ESPERA;
     }
     else
-        return PARADA;
+        return PARADA;*/
 
 }

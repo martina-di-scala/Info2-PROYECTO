@@ -1,7 +1,7 @@
 #ifndef MY_LIB
 #define MY_LIB
 #include"avr_api.h"
-
+#include "conf.h"
 
 
 typedef enum {
@@ -14,31 +14,14 @@ typedef enum {
     PARADA=6
 }estados_t;
 
-//limites de voltaje por color 
+// Limites de voltaje para referencia VCC (5V)
+// Rango total: 0 a 5000 mV 
+#define LIMITE_NADA 200
 #define LIMITE_ROJO 1800
 #define LIMITE_VERDE 3000
 #define LIMITE_AZUL 4200
-/*
-typedef struct {
-  char s_color;
-  char sp_inicio;
-  char sp_rojo;
-  char sp_verde;
-  char sp_azul;
-}entradas_t;
+// Mayor a 4200mV se considera PARADA
 
-typedef struct{
-  char ac_rojo;
-  char ac_verde;
-  char ac_azul;
-}salidas_t;
-
-typedef enum {
-    rojo = 0,
-    verde = 1,
-    azul= 2
-}color_t;
- */
 estados_t iniciar_cinta(void);
 estados_t f_espera(void);
 estados_t f_lectura(void);

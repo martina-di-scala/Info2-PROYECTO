@@ -1,4 +1,5 @@
 #include "mylib.h"
+#include "conf.h"
 
 int main()
 
