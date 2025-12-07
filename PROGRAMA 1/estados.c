@@ -21,21 +21,22 @@ estados_t f_espera(void){
 estados_t f_lectura(void){
     int color;
     color=leer_color();
-    
-    if ( color < LIMITE_ROJO) {
+    if (color < LIMITE_ROJO) {
         return CL_ROJO;
     } 
-    else if ( color < LIMITE_VERDE) {
+    else if ( LIMITE_ROJO < color && color < LIMITE_VERDE) {
         return CL_VERDE;
     } 
-    else if (color < LIMITE_AZUL)
+    else if (LIMITE_VERDE < color && color < LIMITE_AZUL)
     {
         return CL_AZUL;
-    }else
+    }
+    else if (LIMITE_AZUL < color)
     {
         return PARADA;
     }
 }
+
 estados_t f_cl_rojo(void){
     desactivar_ac_verde();
     desactivar_ac_azul();
@@ -65,10 +66,10 @@ estados_t f_cl_azul(void){
     desactivar_ac_rojo();
     desactivar_ac_verde();
 
-     if (SP_ROJO)     
-        activar_ac_rojo();
+     if (SP_AZUL)     
+        activar_ac_azul();
     if (SP_INICIO) {
-        desactivar_ac_rojo();
+        desactivar_ac_azul();
         return ESPERA;
     }
     return CL_AZUL;
@@ -84,7 +85,7 @@ estados_t f_parada(void){
         activar_cinta();
         return ESPERA;
     }
-    else
-        return PARADA;*/
+    else*/
+        return PARADA;
 
 }
