@@ -79,7 +79,7 @@ La programación del sistema cuenta con 5 archivos, además de la API para el mi
 
 - __estados.c__: desarrollo los estados de la máquina. Tengo definidos los estados y la detección de color a partir del ADC(valores definidos para el potenciómetro); a partir de esto debería empezar a completar las acciones de cada estado, en función de los sensores y las funciones definidas en funciones.c.
 
-- __mylib.h__: contiene las estructuras, los prototipos de las funciones de estado y los valores de detección para cada color. No estoy segura de si las constantes y el manejo del ADC están bien planteados.
+- __mylib.h__: contiene las estructuras, los prototipos de las funciones de estado y los valores de detección para cada color.
 
 - __conf.h__: agrupo todas las definiciones relacionadas a las entradas y salidas utilizando la AVR API.
 
